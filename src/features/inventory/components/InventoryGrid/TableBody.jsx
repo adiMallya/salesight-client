@@ -1,7 +1,13 @@
 import { Edit, DeleteOutline } from "@mui/icons-material";
+import { useDispatch } from "react-redux";
+import { removeItemFromInventory } from "src/features/inventory";
 
 export const TableBody = ({ data, isLoading }) => {
   const records = isLoading ? Array(5).fill({}) : data;
+
+  const dispatch = useDispatch();
+  const handleDeleteAction = (itemId) =>
+    dispatch(removeItemFromInventory(itemId));
 
   return (
     <tbody>
@@ -56,6 +62,7 @@ export const TableBody = ({ data, isLoading }) => {
             <button
               className="bg-red-500 text-white py-1 px-4 rounded mr-2 outline-none cursor-pointer"
               disabled={isLoading}
+              onClick={() => handleDeleteAction(item._id)}
             >
               <DeleteOutline />
             </button>
