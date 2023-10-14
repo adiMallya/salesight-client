@@ -18,10 +18,14 @@ const InventoryChart = ({ data }) => {
   };
 
   const options = {
-    title: {
-      display: true,
-      text: "Distribution by Category",
-      fontSize: 20,
+    plugins: {
+      title: {
+        display: true,
+        text: "Distribution by Category",
+        font: {
+          size: 16,
+        },
+      },
     },
   };
 
