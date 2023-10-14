@@ -19,8 +19,8 @@ export const ReportTabs = () => {
   }, [dispatch]);
 
   return (
-    <section className="flex flex-col gap-4">
-      <div className="flex gap-4">
+    <section className="flex flex-col gap-8">
+      <div className="flex justify-center gap-8">
         <button
           className={`py-2 px-4 ${
             activeTab === 0 ? "bg-gray-300" : "bg-gray-200"
