@@ -1,0 +1,1 @@
+export const API_URL = 'https://salesight.slaypoint.repl.co/api/v1';
