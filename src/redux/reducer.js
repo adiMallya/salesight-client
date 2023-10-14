@@ -30,6 +30,25 @@ export const rootReducer = (state = initialState, action) => {
                 loading: false,
                 error: null
             }
+        case "INVENTORY_DATA_SUCCESS":
+            return {
+                ...state,
+                inventory: action.payload,
+                loading: false,
+                error: null
+            }
+        case "REMOVE_FROM_INVENTORY":
+            return {
+                ...state,
+                inventory: state.inventory.filter(item => item._id !== action.payload),
+                loading: false
+            }
+        case "INVENTORY_DATA_FAILURE":
+            return {
+                ...state,
+                error: action?.payload || "Something went wrong.",
+                loading: false
+            }
         case "FETCH_DATA_PENDING":
             return {
                 ...state,
