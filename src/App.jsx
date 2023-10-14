@@ -1,7 +1,12 @@
+import { Routes, Route } from "react-router-dom";
+import { Home } from "./pages";
+
 function App() {
   return (
     <>
-      <h1>SaleSight App</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </>
   );
 }
