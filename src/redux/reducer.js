@@ -1,9 +1,10 @@
+
 const initialState = {
     inventory: [],
-    inventoryReport: null,
+    inventoryReport: [],
     sales: [],
-    salesReport: null,
-    loading: true,
+    salesReport: {},
+    loading: false,
     error: null
 };
 
@@ -28,6 +29,11 @@ export const rootReducer = (state = initialState, action) => {
                 salesReport: action.payload,
                 loading: false,
                 error: null
+            }
+        case "FETCH_DATA_PENDING":
+            return {
+                ...state,
+                loading: true
             }
         default: return state;
     }

@@ -1,6 +1,7 @@
 import * as reportService from "./reportService";
 
 const getInventoryStats = () => async (dispatch) => {
+    dispatch({ type: "FETCH_DATA_PENDING " });
     try {
         const data = await reportService.getInventoryReport();
         if (data.success) {
@@ -13,6 +14,7 @@ const getInventoryStats = () => async (dispatch) => {
 };
 
 const getSaleStats = () => async (dispatch) => {
+    dispatch({ type: "FETCH_DATA_PENDING " });
     try {
         const data = await reportService.getSalesReport();
         if (data.success) {
