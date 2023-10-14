@@ -1,9 +1,9 @@
 import axios from "axios";
-import { API_URL } from "src/utils";
+import { API_URL } from "src/utils/constants";
 
 const getInventoryReport = async () => {
     try {
-        const response = await axios.get(`${API_URL}/reports/inventory`);
+        const response = await axios.get(`${API_URL}/report/inventory`);
         return response.data;
     } catch (error) {
         if (error && error.response) {
@@ -15,7 +15,7 @@ const getInventoryReport = async () => {
 
 const getSalesReport = async () => {
     try {
-        const response = await axios.get(`${API_URL}/reports/sales`);
+        const response = await axios.get(`${API_URL}/report/sales`);
         return response.data;
     } catch (error) {
         if (error && error.response) {
