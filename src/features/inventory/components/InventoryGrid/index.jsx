@@ -14,10 +14,8 @@ const InventoryGrid = () => {
   const handleCategory = (event) => setFilteredCategory(event.target.value);
 
   useEffect(() => {
-    if (loading) {
-      dispatch(fetchAllItemsFromInventory());
-    }
-  }, [loading, dispatch]);
+    dispatch(fetchAllItemsFromInventory());
+  }, [dispatch]);
 
   const filteredData =
     filteredCategory !== "All"
