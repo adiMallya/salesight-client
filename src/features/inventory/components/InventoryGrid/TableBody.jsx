@@ -18,7 +18,7 @@ export const TableBody = ({ data, isLoading }) => {
     const { name, value } = event.target;
     setEditRecord((prev) => ({
       ...prev,
-      [name]: name === ("price" || "quantity ") ? Number(value) : value,
+      [name]: name === ("price" || "quantity") ? Number(value) : value,
     }));
   };
 
@@ -28,7 +28,6 @@ export const TableBody = ({ data, isLoading }) => {
 
       setEditRecord(null);
     } else {
-      //if user clicks on a different record to edit
       setEditRecord({ ...item });
     }
   };
