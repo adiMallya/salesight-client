@@ -51,7 +51,7 @@ const AddInventoryForm = () => {
         className="px-2 py-2 rounded-md border-2 border-grey-500 outline-none"
       />
       <input
-        type="text"
+        type="number"
         name="quantity"
         placeholder="Quantity"
         value={newItem?.quantity}
