@@ -17,3 +17,12 @@ export const InventoryColumns = [
     { label: "Quantity", key: "quantity" },
     { label: "Category", key: "category" },
 ];
+
+export const SalesColumns = [
+    { label: "ID", key: "_id" },
+    { label: "Item Name", key: "itemName" },
+    { label: "Sold At (INR)", key: "salePrice" },
+    { label: "Count", key: "quantity" },
+    { label: "Revenue (INR)", key: "revenue" },
+    { label: "Created On", key: "createdAt" },
+]
