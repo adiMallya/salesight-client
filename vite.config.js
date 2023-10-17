@@ -5,6 +5,7 @@ import autoprefixer from 'autoprefixer';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  root: '.',
   plugins: [react()],
   resolve: {
     alias: {
@@ -18,5 +19,8 @@ export default defineConfig({
         autoprefixer
       ]
     }
+  },
+  build: {
+    outDir: 'dist',
   }
 })
