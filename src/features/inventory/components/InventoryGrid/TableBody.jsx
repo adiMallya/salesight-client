@@ -70,6 +70,7 @@ export const TableBody = ({ data, isLoading }) => {
                   name="itemName"
                   value={editRecord?.itemName}
                   onChange={handleFieldChange}
+                  autoFocus
                 />
               ) : (
                 item?.itemName || "-"
@@ -122,7 +123,7 @@ export const TableBody = ({ data, isLoading }) => {
               }`}
             >
               <button
-                className="bg-blue-500 text-white py-1 px-4 rounded mr-2 outline-none cursor-pointer font-sm"
+                className="bg-blue-500 text-white py-1 px-4 rounded mr-2 outline-none cursor-pointer font-xs"
                 disabled={isLoading}
                 onClick={() => handleEditAction(item)}
                 title="Edit"
