@@ -49,6 +49,19 @@ export const rootReducer = (state = initialState, action) => {
                 error: action?.payload || "Something went wrong.",
                 loading: false
             }
+        case "SALES_DATA_SUCCESS":
+            return {
+                ...state,
+                sales: action.payload,
+                loading: false,
+                error: null
+            }
+        case "SALES_DATA_FAILURE":
+            return {
+                ...state,
+                error: action?.payload || "Something went wrong.",
+                loading: false
+            }
         case "FETCH_DATA_PENDING":
             return {
                 ...state,
