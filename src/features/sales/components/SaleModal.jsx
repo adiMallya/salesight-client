@@ -2,13 +2,13 @@ import { useState } from "react";
 
 export const SaleModal = ({ isOpen, onClose, item, onSubmit }) => {
   const [saleForm, setSaleForm] = useState({
-    salePrice: null,
-    quantity: null,
+    salePrice: "",
+    quantity: "",
   });
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setSaleForm((prev) => ({ ...prev, [name]: value }));
+    setSaleForm((prev) => ({ ...prev, [name]: Number(value) }));
   };
 
   const handleFormSubmit = (event) => {
