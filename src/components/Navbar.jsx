@@ -3,6 +3,7 @@ import {
   InventoryOutlined,
   SellOutlined,
   AssessmentOutlined,
+  GitHub,
 } from "@mui/icons-material";
 
 export const Navbar = () => {
@@ -26,6 +27,15 @@ export const Navbar = () => {
             <SellOutlined />
             <span aria-label="Sales">Sales</span>
           </Link>
+        </li>
+        <li>
+          <a
+            href="https://github.com/adiMallya/salesight-client"
+            className="flex flex-col items-center"
+          >
+            <GitHub />
+            <span aria-label="Sales">Source Code</span>
+          </a>
         </li>
       </ul>
     </nav>
